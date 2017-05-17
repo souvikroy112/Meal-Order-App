@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.souvikroy.meal" >
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" ></uses-permission>
+    <application
+        android:name=".others.ApplicationConstant"
+        android:allowBackup="true"
+        android:icon="@mipmap/meal"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activiy.Login"
+            android:label="MEAL" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activiy.Registration"
+            android:label="REGISTRATION"
+
+            ></activity>
+        <activity
+            android:name=".activiy.GetCatagory"
+            android:parentActivityName=".activiy.Login"
+            android:label="CATAGORY"
+            ></activity>
+        <activity
+            android:name=".activiy.ShowMeal"
+            android:parentActivityName=".activiy.GetCatagory"
+            android:label="MEAL"
+            ></activity>
+        <activity
+            android:name=".activiy.MealDetail"
+            android:parentActivityName=".activiy.GetCatagory"
+            android:label="DETAILS"
+            ></activity>
+        <activity
+            android:name=".activiy.Billing"
+            android:parentActivityName=".activiy.GetCatagory"
+            android:label="BILLING">
+        </activity>
+        <activity android:name=".activiy.Payment"
+            android:label="PAYMENT"></activity>
+    </application>
+
+</manifest>
